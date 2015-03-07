@@ -44,6 +44,33 @@ After sorting, the integers are:
 1 2 3
 ```
 
+## See the Proof Term!
+
+Another way to run the program is to run it directly using the Idris
+interpreter. The advantage here is that you can see not just the resulting
+sorted output list but also the resulting proof terms of the algorithm.
+
+```
+$ idris --nobanner InsertionSort.idr
+*InsertionSort> insertionSort [2,1]
+MkSigma [1, 2]
+        (IsSortedMany 1 2 [] Oh (IsSortedOne 2),
+         SamenessIsTransitive (PrependXIsPrependX 2
+                                                  (SamenessIsTransitive (PrependXIsPrependX 1
+                                                                                            NilIsNil)
+                                                                        (PrependXIsPrependX 1
+                                                                                            NilIsNil)))
+                              (PrependXYIsPrependYX 2
+                                                    1
+                                                    NilIsNil)) : Sigma (Vect 2
+                                                                             Integer)
+                                                                       (\xs' =>
+                                                                          (IsSorted xs',
+                                                                           ElemsAreSame [2,
+                                                                                         1]
+                                                                                        xs'))
+```
+
 ## License
 
 Copyright (c) 2015 by David Foster
