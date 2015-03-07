@@ -43,3 +43,7 @@ Please type a space-separated list of integers:
 After sorting, the integers are: 
 1 2 3
 ```
+
+## License
+
+Copyright (c) 2015 by David Foster
