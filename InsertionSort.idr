@@ -60,9 +60,8 @@ chooseLte x y =
 -- IsSorted
 
 -- Proof that `xs` is sorted.
-data IsSorted : Ord e => (xs:Vect n e) -> Type where
+data IsSorted : (xs:Vect n e) -> Type where
     IsSortedZero :
-        Ord e =>
         IsSorted Nil
     IsSortedOne  :
         Ord e =>
