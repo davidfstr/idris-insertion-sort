@@ -23,7 +23,8 @@ in dependently-typed programming languages like Idris.
 
 ## Prerequisites
 
-* Idris 0.9.16
+* Idris 1.3.1 or later
+    - Probably any Idris 1.x will work.
 * Make
 
 ## How to Run
